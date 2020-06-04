@@ -2,9 +2,7 @@
 
 This plugin modifies metadata for a given path in Metalsmith.
 
-If you need some help, send me an [[%E2%80%98mailto:theholycoder@gmail.com%E2%80%99][email]]!
-
-> theholycoder@gmail.com
+If you need some help, send me an [[mailto:theholycoder@gmail.com][email]]!
 
 ** Table of contents
 
