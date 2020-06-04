@@ -7,7 +7,6 @@ function plugin(config){
         Object.keys(files).forEach(function(file) {
             const data = files[file];
             const path = data.path;
-            console.log(path);
            if (path in config) {
                Object.keys(config[path]).forEach(configKey => {
                    if (configKey in data) {
