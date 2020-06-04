@@ -1,6 +1,6 @@
 #+TITLE: Metalsmith Path Metadata
 
-This plugin modifies metadata for a given path in Metalsmith.
+A plugin for [[https://metalsmith.io/][Metalsmith]] that modifies metadata for a given path.
 
 If you need some help, send me an [[mailto:theholycoder@gmail.com][email]]!
 
