@@ -4,6 +4,8 @@ This plugin modifies metadata for a given path in Metalsmith.
 
 If you need some help, send me an [[%E2%80%98mailto:theholycoder@gmail.com%E2%80%99][email]]!
 
+> theholycoder@gmail.com
+
 ** Table of contents
 
    :TOC:
@@ -45,10 +47,10 @@ Metalsmith(__dirname)
   .use(collections({    
     posts: 'posts/*.md' 
   }))                   
-  .use(pathMetadata({                   // Use the plugin and pass in config
-  "about.hbs": {                        // Specify the path 
-  title: "New Title For This Example"   // Specify the key with the new data
-  }
+  .use(pathMetadata({                     // Use the plugin and pass in config
+    "about.hbs": {                        // Specify the path 
+      title: "New Title For This Example" // Specify the key with the new data
+    }
   }))
   .use(markdown())      
   .use(permalinks({     
