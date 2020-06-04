@@ -1,0 +1,61 @@
+#+TITLE: Metalsmith Path Metadata
+
+This plugin modifies metadata for a given path in Metalsmith.
+
+If you need some help, send me an [[%E2%80%98mailto:theholycoder@gmail.com%E2%80%99][email]]!
+
+** Table of contents
+
+   :TOC:
+   - [[#Installation][Installation]]
+   - [[#Use][Use]]
+
+
+** Installation
+
+   Go to your working directory then:
+
+   #+BEGIN_SRC sh
+   $ npm install metalsmith-path-metadata
+   #+END_SRC
+
+** Use
+
+   #+BEGIN_SRC js
+var Metalsmith   = require('metalsmith');
+var collections  = require('metalsmith-collections');
+var layouts      = require('metalsmith-layouts');
+var markdown     = require('metalsmith-markdown');
+var permalinks   = require('metalsmith-permalinks');
+var pathMetadata = require('metalsmith-path-metadata'); // Import/require the file 
+
+Metalsmith(__dirname)         
+                              
+  .metadata({                 
+                              
+    sitename: "My Static Site & Blog",
+    siteurl: "http://example.com/",
+    description: "It's about saying »Hello« to the world.",
+    generatorname: "Metalsmith",
+    generatorurl: "http://metalsmith.io/"
+  })
+  .source('./src')       
+  .destination('./build')
+  .clean(true)          
+  .use(collections({    
+    posts: 'posts/*.md' 
+  }))                   
+  .use(pathMetadata({                   // Use the plugin and pass in config
+  "about.hbs": {                        // Specify the path 
+  title: "New Title For This Example"   // Specify the key with the new data
+  }
+  }))
+  .use(markdown())      
+  .use(permalinks({     
+    relative: false     
+  }))
+  .use(layouts())       
+  .build(function(err) {
+    if (err) throw err; 
+  });
+   #+END_SRC

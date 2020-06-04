@@ -1,0 +1,11 @@
+{
+  "name": "metalsmith-path-metadata",
+  "version": "1.0.0",
+  "description": "Sets meta-data for a single metalsmith path.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Dov Turkel",
+  "license": "MIT"
+}
