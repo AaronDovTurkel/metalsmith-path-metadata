@@ -6,8 +6,8 @@ If you need some help, send me an [email](mailto:theholycoder@gmail.com)!
 
 ## Table of Contents
 
-1.  [Installation](#orgc8cc273)
-2.  [Use](#orgb59fe5a)
+1.  [Installation](#Installation)
+2.  [Use](#Use)
 
 
 ## Installation
@@ -15,9 +15,6 @@ If you need some help, send me an [email](mailto:theholycoder@gmail.com)!
 Go to your working directory then:
 
     $ npm install metalsmith-path-metadata
-
-
-<a id="orgb59fe5a"></a>
 
 ## Use
 
